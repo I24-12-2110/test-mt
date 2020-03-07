@@ -30,10 +30,16 @@
 </template>
 
 <script>
+import api from './Api/index.js'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  created(){
+    api.getP().then(res =>{
+      console.log(res)
+    })
   }
 }
 </script>
